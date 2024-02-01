@@ -14,3 +14,7 @@ Basic .NET package for the vendor NewZip, allows you to interact with the NewZip
 ## Testing:
 - The NewZipService has been tested with xUnit. You can find the tests in the NewZipServiceTests.cs project.
 - The test will submit a lead to the NewZip API and check the response using the demo token.
+
+## Frameworks:
+- .NET Standard 2.0
+- .NET Standard 2.1
