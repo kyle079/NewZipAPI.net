@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewZipAPI", "NewZipAPI\NewZipAPI.csproj", "{1943E927-10D7-4F65-8C59-E8A7840AB3D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewZipAPITester", "NewZipAPITester\NewZipAPITester.csproj", "{A1342676-F70D-4101-B138-046235A0A522}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{1943E927-10D7-4F65-8C59-E8A7840AB3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1943E927-10D7-4F65-8C59-E8A7840AB3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1943E927-10D7-4F65-8C59-E8A7840AB3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1342676-F70D-4101-B138-046235A0A522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1342676-F70D-4101-B138-046235A0A522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1342676-F70D-4101-B138-046235A0A522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1342676-F70D-4101-B138-046235A0A522}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,20 +2,20 @@ namespace NewZipAPI;
 
 public enum NewZipPropertyType
 {
-    Unknown,
+    Default,
+    Other,
     SingleFamily,
     Townhouse,
-    Condominium,
-    Other
+    Condominium
 }
 
 public static class NewZipPropertyTypeExtensions
 {
-    public static string ToFriendlyString(this NewZipPropertyType propertyType)
+    public static string? ToFriendlyString(this NewZipPropertyType propertyType)
     {
         return propertyType switch
         {
-            NewZipPropertyType.Unknown => "",
+            NewZipPropertyType.Default => null,
             NewZipPropertyType.SingleFamily => "Single-Family",
             NewZipPropertyType.Townhouse => "Townhouse",
             NewZipPropertyType.Condominium => "Condominium",

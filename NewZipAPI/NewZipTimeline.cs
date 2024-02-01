@@ -2,7 +2,7 @@ namespace NewZipAPI;
 
 public enum NewZipTimeline
 {
-    Unknown,
+    Default,
     ASAP,
     ThreeToSixMonths,
     SixToTwelveMonths,
@@ -12,11 +12,11 @@ public enum NewZipTimeline
 
 public static class NewZipTimelineExtensions
 {
-    public static string ToFriendlyString(this NewZipTimeline timeline)
+    public static string? ToFriendlyString(this NewZipTimeline timeline)
     {
         return timeline switch
         {
-            NewZipTimeline.Unknown => "",
+            NewZipTimeline.Default => null,
             NewZipTimeline.ASAP => "ASAP",
             NewZipTimeline.ThreeToSixMonths => "Within 3-6 months",
             NewZipTimeline.SixToTwelveMonths => "Within 6-12 months",
