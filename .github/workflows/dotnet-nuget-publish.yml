@@ -32,10 +32,10 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: nuget-packages
-        path: ./NewZipAPI/bin/Debug/*.nupkg
+        path: D:\a\NewZipAPI.net\NewZipAPI.net\NewZipAPI\nupkgs\*.nupkg
         
 
     - name: Push to GitHub Packages
-      run: dotnet nuget push "./NewZipAPI/bin/Debug/*.nupkg" --source "https://nuget.pkg.github.com/kyle079/index.json"
+      run: dotnet nuget push "D:\a\NewZipAPI.net\NewZipAPI.net\NewZipAPI\nupkgs\*.nupkg" --source "https://nuget.pkg.github.com/kyle079/index.json"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
