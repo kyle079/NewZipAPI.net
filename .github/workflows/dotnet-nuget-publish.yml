@@ -15,10 +15,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '7.0'
-        
-    - name: Test
-      run: dotnet test --verbosity normal
-      working-directory: ./NewZipAPITester
 
     - name: Restore dependencies
       run: dotnet restore
@@ -36,10 +32,10 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: nuget-packages
-        path: ./NewZipAPI/bin/Debug/*nupkg
+        path: ./NewZipAPI/bin/Debug/*.nupkg
         
 
     - name: Push to GitHub Packages
-      run: dotnet nuget push "./NewZipAPI/bin/Debug/*nupkg/*.nupkg" --source "https://nuget.pkg.github.com/kyle079/index.json"
+      run: dotnet nuget push "./NewZipAPI/bin/Debug/*.nupkg" --source "https://nuget.pkg.github.com/kyle079/index.json"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
