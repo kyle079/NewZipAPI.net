@@ -1,0 +1,44 @@
+name: Build and Publish NuGet
+
+on:
+  push:
+    branches: [ main ]  # or your default branch
+
+jobs:
+  build:
+    runs-on: windows-latest, ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.0'
+
+    - name: Restore dependencies
+      run: dotnet restore
+      working-directory: ./NewZipAPI
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ./NewZipAPI
+
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
+      working-directory: ./NewZipAPITester
+
+    - name: Pack
+      run: dotnet pack --configuration Release --no-build --output nupkgs
+      working-directory: ./NewZipAPI
+
+    - name: Publish to GitHub Packages
+      uses: actions/upload-artifact@v2
+      with:
+        name: nuget-packages
+        path: nupkgs/*.nupkg
+
+    - name: Push to GitHub Packages
+      run: dotnet nuget push "nupkgs/*.nupkg" --source "github" --skip-duplicate
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
