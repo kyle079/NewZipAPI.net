@@ -28,7 +28,7 @@ public class UnitTest1
         var request = new NewZipLeadRequest(LeadType.Buyer, leadInformation);
         _testOutputHelper.WriteLine("Request:");
         _testOutputHelper.WriteLine(JsonSerializer.Serialize(request));
-        using var service = new NewZipService().SubmitRequest(request);
+        using var service = new NewZipService().SubmitLeadAsync(request);
         Assert.True(service.Result.Success);
         _testOutputHelper.WriteLine("Response:");
         _testOutputHelper.WriteLine(JsonSerializer.Serialize(service.Result));

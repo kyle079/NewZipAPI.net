@@ -31,7 +31,7 @@ public class NewZipService : INewZipService, IDisposable
         return Task.FromResult(client);
     }
 
-    public async Task<NewZipResponse> SubmitRequest(NewZipLeadRequest request)
+    public async Task<NewZipResponse> SubmitLeadAsync(NewZipLeadRequest request)
     {
         try
         {
