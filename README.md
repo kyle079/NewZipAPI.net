@@ -2,6 +2,10 @@
 
 Basic .NET package for the vendor NewZip, allows you to interact with the NewZip API.
 
+## Nuget Package:
+Hosted here:
+https://github.com/kyle079/NewZipAPI.net/pkgs/nuget/NewZipAPI
+
 ## Methods included:
 - SubmitLeadAsync:
   - Will submit a lead to the NewZip API and return a response.
