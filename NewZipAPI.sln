@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewZipAPI", "NewZipAPI\NewZipAPI.csproj", "{1943E927-10D7-4F65-8C59-E8A7840AB3D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1943E927-10D7-4F65-8C59-E8A7840AB3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1943E927-10D7-4F65-8C59-E8A7840AB3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1943E927-10D7-4F65-8C59-E8A7840AB3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1943E927-10D7-4F65-8C59-E8A7840AB3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
