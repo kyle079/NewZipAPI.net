@@ -29,5 +29,5 @@ jobs:
       working-directory: ./NewZipAPI
       
     - name: Push to GitHub Packages
-      run: Get-ChildItem -Path "D:\a\NewZipAPI.net\NewZipAPI.net\nupkgs\*.nupkg" -File | ForEach-Object {dotnet nuget push $_.FullName --source "https://nuget.pkg.github.com/kyle079/index.json" --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate}
+      run: dotnet nuget push "D:\a\NewZipAPI.net\NewZipAPI.net\nupkgs\*.nupkg" --source "https://nuget.pkg.github.com/kyle079/index.json" --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
       shell: pwsh
